@@ -1,28 +1,21 @@
 import 'package:flutter/material.dart';
+import 'home/home.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const VeratzApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class VeratzApp extends StatelessWidget {
+  const VeratzApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Olá Flutter',
-      home: const HomePage(),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Olá Flutter')),
-      body: const Center(child: Text('Olá, mundo!')),
+      title: 'Veratz',
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: const Color(0xFF6750A4),
+      ),
+      home: const Home(),
     );
   }
 }
